@@ -9,7 +9,7 @@
                     <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/tL7ZE46.jpg"
                                 alt=""> </a> <span class="text-center"><i class="fa fa-rupee">2000</i></span>
                         <div class="product-action">
-                            <div class="product-action-style"><a href="/laptops" style="font-size: large;"> <i class="fa fa-plus"></i></a> <a href="#"> <i
+                            <div class="product-action-style"><a href="#" style="font-size: large;"> <i class="fa fa-plus"></i></a> <a href="/laptops"> <i
                                         class="fa fa-heart"></i>Laptops </a> <a href="#"> <i class="fa fa-shopping-cart"></i> </a>
                             </div>
                         </div>

@@ -31,6 +31,11 @@ const routes = [
         path:'/catalog',
         name:'home',
         component:() => import('../CatalogView.vue')
+    },
+    {
+        path:'/laptops',
+        name:'laptops',
+        component:() => import('../LaptopsView.vue')
     }
 ]
 const router = new VueRouter({
