@@ -1,6 +1,9 @@
 <template>
     <div class="container d-flex justify-content-center mt-100">
         <div class="row">
+            <div style="margin-left: 260px; color: white; margin-bottom: 20px;">
+                <h1>Find some of our products</h1>
+            </div>
             <div class="col-md-3">
                 <div class="product-wrapper mb-45 text-center">
                     <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/tL7ZE46.jpg"
@@ -43,7 +46,7 @@
             </div>
             <div class="col-md-3">
                 <div class="product-wrapper mb-45 text-center">
-                    <div class="product-img"> <a href="#" data-abc="true"> <img style="height: 330px;" src="./assets/Assassin's Creed Valhalla Axe Gameplay 4K Ultra HD Mobile Wallpaper.jpg"
+                    <div class="product-img"> <a href="#" data-abc="true"> <img style="height: 330px; width: 250px;" src="./assets/Assassin's Creed Valhalla Axe Gameplay 4K Ultra HD Mobile Wallpaper.jpg"
                                 alt=""> </a> <span><i class="fa fa-rupee"></i> 23,000</span>
                         <div class="product-action">
                             <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
@@ -62,15 +65,20 @@
 <style>
 @import url(https://fonts.googleapis.com/css?family=Calibri:400,300,700);
 
+
 body {
     display:block;
     font-family: 'Calibri', sans-serif !important;
-    background-color: #eee;
+    background-color: #e9e0e0;
     
 }
 
 .mt-100 {
-    margin-top: 100px
+    margin-top: 230px;
+    background-color: rgba(15, 14, 14, 0.555);
+    width: 1000px;
+    padding: 20px;
+    height: 600px;
 }
 
 .product-wrapper,
@@ -78,10 +86,14 @@ body {
     overflow: hidden;
     position: relative;
     width: 200px;
+    border-style:inset;
+    border-color: #1f0707;
+    
 }
 
 .mb-45 {
-    margin-bottom: 45px
+    margin-bottom: 45px;
+    margin-left: 8px;
 }
 
 .product-action {
@@ -111,11 +123,12 @@ body {
     position: absolute;
     text-align: center;
     text-transform: uppercase;
-    top: 20px
+    top: 20px;
+    transition: all 0.5ms;
 }
 
 .product-action-style {
-    background-color: #fff;
+    background-color: #5a0d0d;
     box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);
     display: inline-block;
     padding: 16px 2px 12px
@@ -135,5 +148,10 @@ body {
 .product-wrapper:hover .product-action {
     bottom: 20px;
     opacity: 1
+}
+
+img:hover {
+    webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+    filter: blur(2px);
 }
 </style>

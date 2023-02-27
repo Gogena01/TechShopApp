@@ -4,8 +4,13 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        name: 'signup',
-        component: () => import('../SignUp.vue')
+        name: '/',
+        component: () => import('../MainPage.vue')
+    },
+    {
+       path:'/welcome',
+       name:'welcome',
+       component:() => import('../HomeView.vue')
     },
     {
         path: '/login',
@@ -18,9 +23,9 @@ const routes = [
         component: () => import('../ForgotPassword.vue')
     },
     {
-        path: '/home',
-        name: 'home',
-        component: () => import('../HomeView.vue')
+        path: '/sign-up',
+        name: 'signUp',
+        component: () => import('../SignUp.vue')
     },
     {
         path:'/catalog',

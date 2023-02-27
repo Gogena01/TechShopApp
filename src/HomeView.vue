@@ -1,17 +1,18 @@
 <template>
-    <div class="vue-tempalte">
-        <h3>Welcome</h3>
-        <p>{{ user.displayName }}</p>
-        <p>{{ user.email }}</p>
-        
-        <button type="submit" class="btn btn-dark btn-lg btn-block" @click="logOut()">
-            Log out
-        </button>
-        <a style="margin-left: 4px;" href="/catalog">
-            <button class="btn btn-primary btn-lg btn-block">
-               Go to catalog
+    <div class="template">
+        <h3 style="font-size: 60px;">Welcome, {{ user.displayName }}</h3>
+        <p style="font-size:30px ">{{ user.email }}</p>
+
+        <div class="controls">
+            <button type="submit" class="btn btn-dark btn-lg btn-block" @click="logOut()">
+                Log out
             </button>
-        </a>
+            <a style="margin-left: 4px;" href="/catalog">
+                <button class="btn btn-primary btn-lg btn-block">
+                    Go to catalog
+                </button>
+            </a>
+        </div>
     </div>
 </template>
 <script>
@@ -42,3 +43,21 @@ export default {
     }
 };
 </script>
+
+
+<style>
+.template {
+    margin-left: 690px;
+    margin-top: 350px;
+    background-color: white;
+    padding: 50px 50px;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.controls {
+    margin-top: 40px;
+}
+</style>
+
+
