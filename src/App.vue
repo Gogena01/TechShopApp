@@ -53,9 +53,11 @@ export default {
         this.user = null;
         document.getElementById('login').style.display = 'inline';
         document.getElementById('register').style.display = 'inline';
-
+        
       }
     });
+
+
   },
 
   methods: {

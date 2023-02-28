@@ -6,7 +6,7 @@
           <form @submit.prevent="userLogin">
             <h3>Sign In</h3>
             <div class="form-group">
-              <label>Email address</label>
+              <label>Email</label>
               <input type="email" class="form-control form-control-lg" v-model="user.email" />
             </div>
             <div class="form-group">

@@ -1,29 +1,31 @@
 <template>
     <div class="mainDiv">
+
         <section class="section-products">
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-8 col-lg-6">
                         <div class="header">
-                            <h3>Featured Product</h3>
-                            <h2>Popular Products</h2>
+                            <h1>Laptops</h1>
+                            <h2>Find your dream laptop here</h2>
                         </div>
                     </div>
                 </div>
+                <hr>
                 <div class="row">
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-1" class="single-product">
                             <div class="part-1">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">ASUS TUF Gaming 17inch</h3>
+                                <h3 class="product-title">ASUS TUF Gaming A15 Gaming laptop</h3>
                                 <h4 class="product-old-price">$2100.00</h4>
                                 <h4 class="product-price">$1899.99</h4>
                             </div>
@@ -35,15 +37,15 @@
                             <div class="part-1">
                                 <span class="discount">15% off</span>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Here Product Title</h3>
-                                <h4 class="product-price">$49.99</h4>
+                                <h3 class="product-title">Macbook pro 16(2021, M1) </h3>
+                                <h4 class="product-price">$2200.00</h4>
                             </div>
                         </div>
                     </div>
@@ -52,16 +54,16 @@
                         <div id="product-3" class="single-product">
                             <div class="part-1">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Here Product Title</h3>
-                                <h4 class="product-old-price">$79.99</h4>
-                                <h4 class="product-price">$49.99</h4>
+                                <h3 class="product-title">Razer Blade 15" Gaming laptop</h3>
+                                <h4 class="product-old-price">$2000.00</h4>
+                                <h4 class="product-price">$1900.00</h4>
                             </div>
                         </div>
                     </div>
@@ -71,15 +73,15 @@
                             <div class="part-1">
                                 <span class="new">new</span>
                                 <ul>
-                                    <li><a href="#"><font-awesome-icon icon="fa-solid fa-user-secret" /></a></li>
-                                    <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
+                                    <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Here Product Title</h3>
-                                <h4 class="product-price">$49.99</h4>
+                                <h3 class="product-title">Acer 15.6" Gaming laptop</h3>
+                                <h4 class="product-price">$1570.00</h4>
                             </div>
                         </div>
                     </div>
@@ -169,9 +171,14 @@ section {
     margin-left: 30px;
 }
 
+hr {
+    border: 1px solid rgb(233, 3, 3);
+    border-radius: 5px;
+}
+
 .mainDiv {
     background-color: rgba(255, 255, 255, 0.795);
-    margin-left: 260px;
+    margin-left: 217px;
     padding: 70px;
 }
 
@@ -187,19 +194,20 @@ a:hover {
 }
 
 .section-products .header {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
-.section-products .header h3 {
-    font-size: 1rem;
-    color: #fe302f;
-    font-weight: 500;
+.section-products .header h1 {
+    font-size: 3.5rem;
+    color: #0a0a0a;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .section-products .header h2 {
     font-size: 2.2rem;
-    font-weight: 400;
-    color: #444444;
+    font-weight: 500;
+    color: #292828;
 }
 
 .section-products .single-product {
@@ -229,28 +237,29 @@ a:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
+    opacity: 0.6;
 }
 
 .section-products #product-1 .part-1 {
-    background: url("./assets/laptops/ASUS\ TUF\ A15\,\ laptop\ gamer\ con\ gran\ rendimiento\ llega\ a\ México.jpg") no-repeat center;
+    background: url("./assets/laptops/ASUS\ TUF\ Gaming\ F15\ Gaming\ Laptop\,\ 15_6_\ 144Hz\ FHD\ IPS-Type\ Display\,\ Intel\ Core\ i7-11800H\ Processor.jpg") no-repeat center;
     background-size: cover;
     transition: all 0.5s;
 }
 
 .section-products #product-2 .part-1 {
-    background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+    background: url("./assets/laptops/MacBook\ Pro\ 16\ \(2021\,\ M1\)\ skins\ -\ Custom\ _\ Bottom.jpg") no-repeat center;
     background-size: cover;
     transition: all 0.5s ;
 }
 
 .section-products #product-3 .part-1 {
-    background: url("./assets/Assassin\'s\ Creed\ Valhalla\ Axe\ Gameplay\ 4K\ Ultra\ HD\ Mobile\ Wallpaper.jpg") no-repeat center;
+    background: url("./assets/laptops/Razer\ Blade\ 15\ Gaming\ Laptop\ 2019.jpg") no-repeat center;
     background-size: cover;
     transition: all 0.5s ;  
 }
 
 .section-products #product-4 .part-1 {
-    background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+    background: url("./assets/laptops/Best\ Buy_\ Acer\ 15_6_\ Gaming\ Laptop\ Intel\ Core\ i7\ 16GB\ Memory\ NVIDIA\ GeForce\ RTX\ 2060\ 512GB\ Solid\ State\ Drive\ Aby\ Black\ PT5155171VV.jpg") no-repeat center;
     background-size: cover;
     transition: all 0.5s ;
 }
