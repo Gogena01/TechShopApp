@@ -16,7 +16,7 @@
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-1" class="single-product">
-                            <div class="part-1">
+                            <div class="part-1" :style="{ background: 'url(' + items[1].image + ') no-repeat center', backgroundRepeat:'center', backgroundSize:'cover'  }" >
                                 <ul>
                                     <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
@@ -34,7 +34,7 @@
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-2" class="single-product">
-                            <div class="part-1">
+                            <div class="part-1" :style="{ background: 'url(' + items[0].img + ')', backgroundRepeat:'center', backgroundSize:'cover'  }">
                                 <span class="discount">15% off</span>
                                 <ul>
                                     <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
@@ -52,7 +52,7 @@
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-3" class="single-product">
-                            <div class="part-1">
+                            <div class="part-1" :style="{ background: 'url(' + items[2].img +') no-repeat center' , backgroundSize:'cover'  }">
                                 <ul>
                                     <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
@@ -60,17 +60,17 @@
                                     <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
-                            <div class="part-2">
-                                <h3 class="product-title">Razer Blade 15" Gaming laptop</h3>
-                                <h4 class="product-old-price">$2000.00</h4>
-                                <h4 class="product-price">$1900.00</h4>
+                            <div class="part-2" >
+                                <h3 class="product-title">{{items[2].model}}</h3>
+                                <h4 class="product-old-price">${{ items[2].oldPrIce }}</h4>
+                                <h4 class="product-price">${{ items[2].newPrice }}</h4>
                             </div>
                         </div>
                     </div>
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-4" class="single-product">
-                            <div class="part-1">
+                            <div class="part-1" :style="{ background: 'url(' + items[3].img +') no-repeat center' , backgroundSize:'cover'  }">
                                 <span class="new">new</span>
                                 <ul>
                                     <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
@@ -80,8 +80,8 @@
                                 </ul>
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Acer 15.6" Gaming laptop</h3>
-                                <h4 class="product-price">$1570.00</h4>
+                                <h3 class="product-title">{{items[3].model}}</h3>
+                                <h4 class="product-price">{{ items[3].price }}</h4>
                             </div>
                         </div>
                     </div>
@@ -261,25 +261,26 @@ a:hover {
 }
 
 .section-products #product-1 .part-1 {
-    background: url("./assets/laptops/ASUS\ TUF\ Gaming\ F15\ Gaming\ Laptop\,\ 15_6_\ 144Hz\ FHD\ IPS-Type\ Display\,\ Intel\ Core\ i7-11800H\ Processor.jpg") no-repeat center;
-    background-size: cover;
+   /* background: url("./assets/laptops/asusTuf.jpg") no-repeat center;*/
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
     transition: all 0.5s;
 }
 
 .section-products #product-2 .part-1 {
-    background: url("./assets/laptops/MacBook\ Pro\ 16\ \(2021\,\ M1\)\ skins\ -\ Custom\ _\ Bottom.jpg") no-repeat center;
+   /* background: url("./assets/laptops/macbook.jpg") no-repeat center;*/
     background-size: cover;
     transition: all 0.5s;
 }
 
 .section-products #product-3 .part-1 {
-    background: url("./assets/laptops/Razer\ Blade\ 15\ Gaming\ Laptop\ 2019.jpg") no-repeat center;
+    /*background: url("./assets/laptops/razerBlade.jpg") no-repeat center;*/
     background-size: cover;
     transition: all 0.5s;
 }
 
 .section-products #product-4 .part-1 {
-    background: url("./assets/laptops/Best\ Buy_\ Acer\ 15_6_\ Gaming\ Laptop\ Intel\ Core\ i7\ 16GB\ Memory\ NVIDIA\ GeForce\ RTX\ 2060\ 512GB\ Solid\ State\ Drive\ Aby\ Black\ PT5155171VV.jpg") no-repeat center;
+    /*background: url("./assets/laptops/acer15.jpg") no-repeat center;*/
     background-size: cover;
     transition: all 0.5s;
 }
