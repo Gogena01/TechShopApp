@@ -25,8 +25,8 @@
                                 </ul>
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">ASUS TUF Gaming A15 Gaming laptop</h3>
-                                <h4 class="product-old-price">$2100.00</h4>
+                                <h3 class="product-title"  >{{ items[1].model }}</h3>
+                                <h4 class="product-old-price"  >${{ items[1].price }}</h4>
                                 <h4 class="product-price">$1899.99</h4>
                             </div>
                         </div>
@@ -44,8 +44,8 @@
                                 </ul>
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Macbook pro 16(2021, M1) </h3>
-                                <h4 class="product-price">$2200.00</h4>
+                                <h3 class="product-title">{{ items[0].model }}</h3>
+                                <h4 class="product-price">${{ items[0].price }}</h4>
                             </div>
                         </div>
                     </div>
@@ -163,6 +163,26 @@
     </div>
 </template>
 
+<script>
+import firebase from 'firebase';
+export default {
+    data() {
+        return {
+            items: []
+        }
+    },
+    mounted() {
+        firebase.firestore().collection('laptops').get().then(querySnapshot => {
+            querySnapshot.forEach(doc => {
+                this.items.push( doc.data())
+                console.log(doc.data())
+            })
+        })
+    }
+}
+
+</script>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
@@ -249,19 +269,19 @@ a:hover {
 .section-products #product-2 .part-1 {
     background: url("./assets/laptops/MacBook\ Pro\ 16\ \(2021\,\ M1\)\ skins\ -\ Custom\ _\ Bottom.jpg") no-repeat center;
     background-size: cover;
-    transition: all 0.5s ;
+    transition: all 0.5s;
 }
 
 .section-products #product-3 .part-1 {
     background: url("./assets/laptops/Razer\ Blade\ 15\ Gaming\ Laptop\ 2019.jpg") no-repeat center;
     background-size: cover;
-    transition: all 0.5s ;  
+    transition: all 0.5s;
 }
 
 .section-products #product-4 .part-1 {
     background: url("./assets/laptops/Best\ Buy_\ Acer\ 15_6_\ Gaming\ Laptop\ Intel\ Core\ i7\ 16GB\ Memory\ NVIDIA\ GeForce\ RTX\ 2060\ 512GB\ Solid\ State\ Drive\ Aby\ Black\ PT5155171VV.jpg") no-repeat center;
     background-size: cover;
-    transition: all 0.5s ;
+    transition: all 0.5s;
 }
 
 .section-products .single-product .part-1 .discount,

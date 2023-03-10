@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-3">
                 <div class="product-wrapper mb-45 text-center">
-                    <div class="product-img"> <a href="#" data-abc="true"> <img style="height: 330px;" src="./assets/computer.jpg"
+                    <div class="product-img"> <a href="#" data-abc="true"> <img style="height: 330px;" src="../assets/computer.jpg"
                                 alt=""> </a> <span><i class="fa fa-rupee"></i> 1500</span>
                         <div class="product-action">
                             <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-3">
                 <div class="product-wrapper mb-45 text-center">
-                    <div class="product-img"> <a href="#" data-abc="true"> <img style="height: 330px;" src="./assets/accessories.jpg"
+                    <div class="product-img"> <a href="#" data-abc="true"> <img style="height: 330px;" src="../assets/accessories.jpg"
                                 alt=""> </a> <span><i class="fa fa-rupee"></i> 33,000</span>
                         <div class="product-action">
                             <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
@@ -46,7 +46,7 @@
             </div>
             <div class="col-md-3">
                 <div class="product-wrapper mb-45 text-center">
-                    <div class="product-img"> <a href="#" data-abc="true"> <img style="height: 330px; width: 250px;" src="./assets/Assassin's Creed Valhalla Axe Gameplay 4K Ultra HD Mobile Wallpaper.jpg"
+                    <div class="product-img"> <a href="#" data-abc="true"> <img style="height: 330px; width: 250px;" src="../assets/Assassin's Creed Valhalla Axe Gameplay 4K Ultra HD Mobile Wallpaper.jpg"
                                 alt=""> </a> <span><i class="fa fa-rupee"></i> 23,000</span>
                         <div class="product-action">
                             <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"

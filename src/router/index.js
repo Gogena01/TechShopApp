@@ -5,32 +5,32 @@ const routes = [
     {
         path: '/',
         name: '/',
-        component: () => import('../MainPage.vue')
+        component: () => import('../pages/MainPage.vue')
     },
     {
        path:'/welcome',
        name:'welcome',
-       component:() => import('../HomeView.vue')
+       component:() => import('../pages/HomeView.vue')
     },
     {
         path: '/login',
         name: 'login',
-        component: () => import('../LoginView.vue')
+        component: () => import('../pages/LoginView.vue')
     },
     {
         path: '/forgot-password',
         name: 'forgot-password',
-        component: () => import('../ForgotPassword.vue')
+        component: () => import('../pages/ForgotPassword.vue')
     },
     {
         path: '/sign-up',
         name: 'signUp',
-        component: () => import('../SignUp.vue')
+        component: () => import('../pages/SignUp.vue')
     },
     {
         path:'/catalog',
         name:'home',
-        component:() => import('../CatalogView.vue')
+        component:() => import('../pages/CatalogView.vue')
     },
     {
         path:'/laptops',
