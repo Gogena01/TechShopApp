@@ -16,7 +16,8 @@
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-1" class="single-product">
-                            <div class="part-1" :style="{ background: 'url(' + items[1].image + ') no-repeat center', backgroundRepeat:'center', backgroundSize:'cover'  }" >
+                            <div class="part-1"
+                                :style="{ background: 'url(' + items[1].image + ') no-repeat center', backgroundRepeat: 'center', backgroundSize: 'cover' }">
                                 <ul>
                                     <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
@@ -25,8 +26,8 @@
                                 </ul>
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title"  >{{ items[1].model }}</h3>
-                                <h4 class="product-old-price"  >${{ items[1].price }}</h4>
+                                <h3 class="product-title">{{ items[1].model }}</h3>
+                                <h4 class="product-old-price">${{ items[1].price }}</h4>
                                 <h4 class="product-price">$1899.99</h4>
                             </div>
                         </div>
@@ -34,10 +35,11 @@
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-2" class="single-product">
-                            <div class="part-1" :style="{ background: 'url(' + items[0].img + ')', backgroundRepeat:'center', backgroundSize:'cover'  }">
+                            <div class="part-1"
+                                :style="{ background: 'url(' + items[0].img + ')', backgroundRepeat: 'center', backgroundSize: 'cover' }">
                                 <span class="discount">15% off</span>
                                 <ul>
-                                    <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToCart(items[0].model,items[0].price )"><font-awesome-icon icon="shopping-cart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
@@ -52,7 +54,8 @@
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-3" class="single-product">
-                            <div class="part-1" :style="{ background: 'url(' + items[2].img +') no-repeat center' , backgroundSize:'cover'  }">
+                            <div class="part-1"
+                                :style="{ background: 'url(' + items[2].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <ul>
                                     <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
@@ -60,8 +63,8 @@
                                     <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
-                            <div class="part-2" >
-                                <h3 class="product-title">{{items[2].model}}</h3>
+                            <div class="part-2">
+                                <h3 class="product-title">{{ items[2].model }}</h3>
                                 <h4 class="product-old-price">${{ items[2].oldPrIce }}</h4>
                                 <h4 class="product-price">${{ items[2].newPrice }}</h4>
                             </div>
@@ -70,7 +73,8 @@
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-4" class="single-product">
-                            <div class="part-1" :style="{ background: 'url(' + items[3].img +') no-repeat center' , backgroundSize:'cover'  }">
+                            <div class="part-1"
+                                :style="{ background: 'url(' + items[3].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <span class="new">new</span>
                                 <ul>
                                     <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
@@ -80,7 +84,7 @@
                                 </ul>
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">{{items[3].model}}</h3>
+                                <h3 class="product-title">{{ items[3].model }}</h3>
                                 <h4 class="product-price">{{ items[3].price }}</h4>
                             </div>
                         </div>
@@ -174,11 +178,34 @@ export default {
     mounted() {
         firebase.firestore().collection('laptops').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
-                this.items.push( doc.data())
-                console.log(doc.data())
+                this.items.push(doc.data())
             })
         })
+    },
+    methods: {
+
+        addToCart(productName, productPrice) {
+            // Get a reference to the Firestore database
+            const db = firebase.firestore();
+
+            // Construct the data to be inserted
+            const data = {
+                name: productName,
+                price: productPrice,
+                username:firebase.auth().currentUser.displayName
+            };
+
+            // Insert the data into the "cart" collection
+            db.collection('cart').doc().set(data)
+                .then(() => {
+                    console.log('Data inserted successfully!');
+                })
+                .catch((error) => {
+                    console.error('Error inserting data: ', error);
+                });
+        }
     }
+
 }
 
 </script>
@@ -261,14 +288,14 @@ a:hover {
 }
 
 .section-products #product-1 .part-1 {
-   /* background: url("./assets/laptops/asusTuf.jpg") no-repeat center;*/
+    /* background: url("./assets/laptops/asusTuf.jpg") no-repeat center;*/
     /*background-size: cover;*/
     background-repeat: no-repeat;
     transition: all 0.5s;
 }
 
 .section-products #product-2 .part-1 {
-   /* background: url("./assets/laptops/macbook.jpg") no-repeat center;*/
+    /* background: url("./assets/laptops/macbook.jpg") no-repeat center;*/
     background-size: cover;
     transition: all 0.5s;
 }
