@@ -39,7 +39,7 @@
                                 :style="{ background: 'url(' + items[0].img + ')', backgroundRepeat: 'center', backgroundSize: 'cover' }">
                                 <span class="discount">15% off</span>
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[0].model,items[0].price )"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToCart(items[0].model,items[0].price, items[0].img )"><font-awesome-icon icon="shopping-cart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
@@ -184,7 +184,7 @@ export default {
     },
     methods: {
 
-        addToCart(productName, productPrice) {
+        addToCart(productName, productPrice, img) {
             // Get a reference to the Firestore database
             const db = firebase.firestore();
 
@@ -192,7 +192,8 @@ export default {
             const data = {
                 name: productName,
                 price: productPrice,
-                username:firebase.auth().currentUser.displayName
+                username:firebase.auth().currentUser.displayName,
+                image: img
             };
 
             // Insert the data into the "cart" collection
