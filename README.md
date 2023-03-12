@@ -5,7 +5,6 @@ TechShop is an e-commerce website built using Vue.js, Firebase, Bootstrap, and C
 
 
 ![logo](https://user-images.githubusercontent.com/107917621/224542699-c9e0158c-0298-4d81-850b-79a00f8a45de.png)
-![firebase_28dp](https://user-images.githubusercontent.com/107917621/224542872-3eeb7e07-3589-4fb1-a3f5-2cb989984509.png)
 
 ## Build 
 * ** The project is built using Vue.js, which is a popular JavaScript framework for building user interfaces. Vue.js allows for the creation of reactive and modular components, making it easy to build complex UIs in a maintainable way. **
