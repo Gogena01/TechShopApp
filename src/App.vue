@@ -8,19 +8,19 @@
         </a>
         <ul class="nav navbar-nav flex-row float-right">
           <li class="nav-item" id="home">
-            <router-link class="btn btn-outline-danger" to="/">Home</router-link>
+            <router-link class="btn btn-outline-danger" id="prup" to="/" style="margin-right: 10px;">Home</router-link>
           </li>
           <li class="nav-item" id="login" style="display: none;">
-            <router-link class="btn btn-outline-danger" to="/login">Sign in</router-link>
+            <router-link class="btn btn-outline-danger" id="purp" to="/login" style="margin-right: 10px;">Sign in</router-link>
           </li>
           <li class="nav-item" id="register" style="display: none;">
-            <router-link class="btn btn-outline-danger" to="/sign-up">Sign up</router-link>
+            <router-link class="btn btn-outline-danger" id="purp" to="/sign-up" style="margin-right: 10px;">Sign up</router-link>
           </li>
           <li class="nav-item" id="catalog" >
-            <router-link class="btn btn-outline-danger" to="/catalog">Catalog</router-link>
+            <router-link class="btn btn-outline-danger" id="purp" to="/catalog" style="margin-right: 10px;">Catalog</router-link>
           </li>
           <li class="nav-item" id="logout" style="display: none;">
-            <button type="submit" class="btn btn-outline-danger" @click="logOut()">
+            <button type="submit" class="btn btn-outline-danger" id="purp" @click="logOut()" style="margin-right: 10px;">
               Log out
             </button>
           </li>
@@ -73,4 +73,15 @@ export default {
 };
 </script>
 
+
+<style>
+.btn-outline-danger {
+  border-color: rgb(209, 10, 209);
+  color:rgb(209, 10, 209); 
+}
+
+.btn-outline-danger:hover {
+  background-color: rgb(209, 10, 209);
+}
+</style>
 
