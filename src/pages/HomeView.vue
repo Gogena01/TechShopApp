@@ -8,7 +8,7 @@
                 Log out
             </button>
             <a style="margin-left: 4px;" href="/catalog">
-                <button class="btn btn-primary btn-lg btn-block">
+                <button class="btn btn-primary btn-lg btn-block" style="background-color: purple; border-color: purple;">
                     Go to catalog
                 </button>
             </a>
@@ -49,11 +49,11 @@ export default {
 
 <style>
 .template {
-    margin-left: 690px;
+    margin-left: 0px;
     margin-top: 350px;
-    background-color: white;
+    background-color: rgb(231, 194, 229);
     padding: 50px 50px;
-    border-radius: 10%;
+    border-radius: 0%;
     text-align: center;
 }
 
