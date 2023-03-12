@@ -3,24 +3,24 @@
     <!-- Navigation -->
     <nav class="navbar shadow bg-white rounded justify-content-between flex-nowrap flex-row fixed-top">
       <div class="container">
-        <a class="navbar-brand float-left" href="#" target="_blank">
-          Vue project with Authentication
+        <a class="navbar-brand float-left" href="#" target="_blank" style="font-weight: 800; color: purple; font-size: 30px;">
+          TechShop <font-awesome-icon icon="fa-solid fa-fire" />
         </a>
         <ul class="nav navbar-nav flex-row float-right">
           <li class="nav-item" id="home">
-            <router-link class="btn btn-outline-danger" id="prup" to="/" style="margin-right: 10px;">Home</router-link>
+            <router-link class="btn btn-outline-dark" id="prup" to="/" style="margin-right: 10px;">Home</router-link>
           </li>
           <li class="nav-item" id="login" style="display: none;">
-            <router-link class="btn btn-outline-danger" id="purp" to="/login" style="margin-right: 10px;">Sign in</router-link>
+            <router-link class="btn btn-outline-dark" id="purp" to="/login" style="margin-right: 10px;">Sign in</router-link>
           </li>
           <li class="nav-item" id="register" style="display: none;">
-            <router-link class="btn btn-outline-danger" id="purp" to="/sign-up" style="margin-right: 10px;">Sign up</router-link>
+            <router-link class="btn btn-outline-dark" id="purp" to="/sign-up" style="margin-right: 10px;">Sign up</router-link>
           </li>
           <li class="nav-item" id="catalog" >
-            <router-link class="btn btn-outline-danger" id="purp" to="/catalog" style="margin-right: 10px;">Catalog</router-link>
+            <router-link class="btn btn-outline-dark" id="purp" to="/catalog" style="margin-right: 10px;">Catalog</router-link>
           </li>
           <li class="nav-item" id="logout" style="display: none;">
-            <button type="submit" class="btn btn-outline-danger" id="purp" @click="logOut()" style="margin-right: 10px;">
+            <button type="submit" class="btn btn-outline-dark" id="purp" @click="logOut()" style="margin-right: 10px;">
               Log out
             </button>
           </li>

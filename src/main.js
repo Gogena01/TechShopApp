@@ -11,6 +11,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faReadme } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFire } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faShoppingCart)
 library.add(faPlus)
@@ -18,6 +19,7 @@ library.add(faHeart)
 library.add(faReadme)
 library.add(faGithub)
 library.add(faLinkedin)
+library.add(faFire)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 import '@/assets/main.css'

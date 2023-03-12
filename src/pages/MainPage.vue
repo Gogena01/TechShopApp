@@ -9,7 +9,9 @@
         <div class="welc">
             <div class="wrapper" >
                 <div class="header header_home">TechShop</div>
-                <div class="content content_home">Welcome to our online store for all your technology needs! We offer a wide
+                <div class="content content_home">
+                    <hr>
+                    Welcome to our online store for all your technology needs! We offer a wide
                     range of high-quality laptops, accessories, games, and computers to meet your everyday technology needs.
                     Whether you are a professional, a gamer, or just looking for an upgrade, we have the perfect products
                     for you.</div>
@@ -214,17 +216,6 @@
     left: 15%;
 }
 
-.header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5%;
-
-    background: black;
-}
-
 
 /*************/
 .content {
@@ -234,7 +225,7 @@
     font-family:'Times New Roman', Times, serif;
 
 
-    top: 21%;
+    top: 17%;
     left: 7%;
 }
 
@@ -249,5 +240,5 @@
     clip-path: polygon(35% 0%, 100% 0, 100% 100%, 8% 100%);
 
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }</style>

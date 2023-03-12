@@ -128,7 +128,7 @@ body {
 }
 
 .product-action-style {
-    background-color: #5a0d0d;
+    background-color: #3d0739;
     box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);
     display: inline-block;
     padding: 16px 2px 12px
@@ -138,11 +138,12 @@ body {
     color: #979797;
     line-height: 1;
     padding: 0 21px;
-    position: relative
+    position: relative;
+    text-decoration:none
 }
 
 .product-action-style>a.action-plus {
-    font-size: 18px
+    font-size: 20px;
 }
 
 .product-wrapper:hover .product-action {

@@ -7,7 +7,7 @@
                     <div class="col-md-8 col-lg-6">
                         <div class="header">
                             <h1>Laptops</h1>
-                            <h2>Find your dream laptop here</h2>
+                            <h2 style="font-weight: 800;">Find your dream laptop</h2>
                         </div>
                     </div>
                 </div>
@@ -220,7 +220,7 @@ section {
 }
 
 hr {
-    border: 1px solid rgb(233, 3, 3);
+    border: 1px solid rgb(110, 4, 105);
     border-radius: 5px;
 }
 
