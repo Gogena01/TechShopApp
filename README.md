@@ -2,6 +2,8 @@
 
 ## Introduction 
 TechShop is an e-commerce website built using Vue.js, Firebase, Bootstrap, and CSS. It is a platform for selling laptops, computers, accessories, and games online. The website allows customers to browse through the product catalog, search for specific items, add them to their cart, and checkout using a secure payment gateway.
+
+
 ![logo](https://user-images.githubusercontent.com/107917621/224542699-c9e0158c-0298-4d81-850b-79a00f8a45de.png)
 ![Firebase Sticker by hipstuff](https://user-images.githubusercontent.com/107917621/224542726-3add318b-bb41-4f42-b7a5-fc079c807f5d.jpg)
 
