@@ -19,7 +19,7 @@
                             <div class="part-1"
                                 :style="{ background: 'url(' + items[1].image + ') no-repeat center', backgroundRepeat: 'center', backgroundSize: 'cover' }">
                                 <ul>
-                                    <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToCart(items[1].model,items[1].price, items[1].image )" href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
@@ -192,7 +192,7 @@ export default {
             const data = {
                 name: productName,
                 price: productPrice,
-                username:firebase.auth().currentUser.displayName,
+                email:firebase.auth().currentUser.email,
                 image: img
             };
 
