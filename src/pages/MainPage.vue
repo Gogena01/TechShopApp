@@ -2,7 +2,7 @@
     <div class="mainD">
         <!-- <img src="../assets/fluxSlide/Awesome White Minimalist Wallpapers - WallpaperAccess.png" class="mainImg" />-->
         <div class="mainNav">
-            <a href="/favourite" class="one" style="text-decoration: none;">Favourites</a>
+            <a href="/favourites" class="one" style="text-decoration: none;">Favourites</a>
             <a href="/cart" class="two" style="text-decoration: none;">Shopping cart</a>
             <a href="/catalog" class="three" style="text-decoration: none;">Special Offers</a>
         </div>

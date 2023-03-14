@@ -19,8 +19,9 @@
                             <div class="part-1"
                                 :style="{ background: 'url(' + items[1].image + ') no-repeat center', backgroundRepeat: 'center', backgroundSize: 'cover' }">
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[1].model,items[1].price, items[1].image )" href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
+                                    <li><a v-on:click="addToCart(items[1].model, items[1].price, items[1].image)"
+                                         href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToFavourite(items[1].model, items[1].price, items[1].image)" href="#"><font-awesome-icon icon="heart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
@@ -39,7 +40,8 @@
                                 :style="{ background: 'url(' + items[0].img + ')', backgroundRepeat: 'center', backgroundSize: 'cover' }">
                                 <span class="discount">15% off</span>
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[0].model,items[0].price, items[0].img )"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToCart(items[0].model, items[0].price, items[0].img)"><font-awesome-icon
+                                                icon="shopping-cart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
@@ -185,18 +187,15 @@ export default {
     methods: {
 
         addToCart(productName, productPrice, img) {
-            // Get a reference to the Firestore database
             const db = firebase.firestore();
 
-            // Construct the data to be inserted
             const data = {
                 name: productName,
                 price: productPrice,
-                email:firebase.auth().currentUser.email,
+                email: firebase.auth().currentUser.email,
                 image: img
             };
 
-            // Insert the data into the "cart" collection
             db.collection('cart').doc().set(data)
                 .then(() => {
                     console.log('Data inserted successfully!');
@@ -204,6 +203,25 @@ export default {
                 .catch((error) => {
                     console.error('Error inserting data: ', error);
                 });
+        },
+
+
+        addToFavourite(productName, productPrice, img) {
+            const db = firebase.firestore();
+            const data = {
+                name: productName,
+                price: productPrice,
+                email: firebase.auth().currentUser.email,
+                image: img
+            };
+
+            db.collection('favourites').doc().set(data)
+                .then(() => {
+                    console.log('Data inserted successfully!');
+                })
+                .catch((error) => {
+                    console.error('Error inserting data:', error)
+                })
         }
     }
 
@@ -289,7 +307,7 @@ a:hover {
 }
 
 .section-products #product-1 .part-1 {
-    /* background: url("./assets/laptops/asusTuf.jpg") no-repeat center;*/
+    /*background: url("./assets/laptops/asusTuf.jpg") no-repeat center;*/
     /*background-size: cover;*/
     background-repeat: no-repeat;
     transition: all 0.5s;
