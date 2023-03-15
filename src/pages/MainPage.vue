@@ -225,7 +225,7 @@
     font-family:'Times New Roman', Times, serif;
 
 
-    top: 17%;
+    top: 15%;
     left: 7%;
 }
 

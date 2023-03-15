@@ -44,7 +44,7 @@
                                                 icon="shopping-cart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
+                                    <li><a :href="'/products/' + items[0].id"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
@@ -326,7 +326,7 @@ a:hover {
 }
 
 .section-products #product-4 .part-1 {
-    /*background: url("./assets/laptops/acer15.jpg") no-repeat center;*/
+    background: url("./assets/laptops/acer15.jpg") no-repeat center;
     background-size: cover;
     transition: all 0.5s;
 }

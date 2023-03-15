@@ -46,6 +46,12 @@ const routes = [
         path:'/favourites',
         name:'favourites',
         component:() => import('../FavouritesView.vue')
+    },
+    {
+        path:'/:id',
+        name:'productsView',
+        component:() => import('../pages/ProductView.vue'),
+        props:true
     }
 ]
 const router = new VueRouter({
