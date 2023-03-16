@@ -17,11 +17,11 @@
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-1" class="single-product">
                             <div class="part-1"
-                                :style="{ background: 'url(' + items[1].image + ') no-repeat center', backgroundRepeat: 'center', backgroundSize: 'cover' }">
+                                :style="{ background: 'url(' + items[1].img + ') no-repeat center', backgroundRepeat: 'center', backgroundSize: 'cover' }">
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[1].model, items[1].price, items[1].image)"
+                                    <li><a v-on:click="addToCart(items[1].model, items[1].price, items[1].img)"
                                          href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
-                                    <li><a v-on:click="addToFavourite(items[1].model, items[1].price, items[1].image)" href="#"><font-awesome-icon icon="heart" /></a></li>
+                                    <li><a v-on:click="addToFavourite(items[1].model, items[1].price, items[1].img)" href="#"><font-awesome-icon icon="heart" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
                                     <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
@@ -326,7 +326,7 @@ a:hover {
 }
 
 .section-products #product-4 .part-1 {
-    background: url("./assets/laptops/acer15.jpg") no-repeat center;
+    /*background: url("./assets/laptops/acer15.jpg") no-repeat center;*/
     background-size: cover;
     transition: all 0.5s;
 }

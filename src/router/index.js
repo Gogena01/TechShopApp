@@ -48,7 +48,7 @@ const routes = [
         component:() => import('../FavouritesView.vue')
     },
     {
-        path:'/:id',
+        path:'/products/:id',
         name:'productsView',
         component:() => import('../pages/ProductView.vue'),
         props:true
