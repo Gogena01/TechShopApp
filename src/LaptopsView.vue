@@ -6,7 +6,7 @@
                 <div class="row justify-content-center text-center">
                     <div class="col-md-8 col-lg-6">
                         <div class="header">
-                            <h1>Laptops</h1>
+                            <h1 style="color: purple;">Laptops</h1>
                             <h2 style="font-weight: 800;">Find your dream laptop</h2>
                         </div>
                     </div>
@@ -22,8 +22,7 @@
                                     <li><a v-on:click="addToCart(items[1].model, items[1].price, items[1].img)"
                                          href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
                                     <li><a v-on:click="addToFavourite(items[1].model, items[1].price, items[1].img)" href="#"><font-awesome-icon icon="heart" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
+                                    <li><a :href="'/products/' + items[1].id"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
@@ -42,8 +41,7 @@
                                 <ul>
                                     <li><a v-on:click="addToCart(items[0].model, items[0].price, items[0].img)"><font-awesome-icon
                                                 icon="shopping-cart" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
+                                    <li><a v-on:click="addToFavourite(items[0].model, items[0].price, items[0].img)"><font-awesome-icon icon="heart" /></a></li>
                                     <li><a :href="'/products/' + items[0].id"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
@@ -59,10 +57,9 @@
                             <div class="part-1"
                                 :style="{ background: 'url(' + items[2].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <ul>
-                                    <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
+                                    <li><a v-on:click="addToCart(items[2].model, items[2].price, items[2].img)"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToFavourite(items[2].model, items[2].price, items[2].img)"><font-awesome-icon icon="heart" /></a></li>
+                                    <li><a :href="'/products/' + items[2].id"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
@@ -79,10 +76,9 @@
                                 :style="{ background: 'url(' + items[3].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <span class="new">new</span>
                                 <ul>
-                                    <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="heart" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="plus" /></a></li>
-                                    <li><a href="#"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
+                                    <li><a v-on:click="addToCart(items[3].model, items[3].price, items[3].img)"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToFavourite(items[3].model, items[3].price, items[3].img)"><font-awesome-icon icon="heart" /></a></li>
+                                    <li><a :href="'/products/' + items[3].id"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
@@ -93,31 +89,30 @@
                     </div>
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div id="product-1" class="single-product">
-                            <div class="part-1">
+                        <div id="product-5" class="single-product">
+                            <div class="part-1"
+                                :style="{ background: 'url(' + items[4].img + ') no-repeat center', backgroundSize: 'cover' }">
+                                <span class="new">new</span>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                    <li><a v-on:click="addToCart(items[4].model, items[4].price, items[4].img)"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToFavourite(items[4].model, items[4].price, items[4].img)"><font-awesome-icon icon="heart" /></a></li>
+                                    <li><a :href="'/products/' + items[4].id"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Here Product Title</h3>
-                                <h4 class="product-old-price">$79.99</h4>
-                                <h4 class="product-price">$49.99</h4>
+                                <h3 class="product-title">{{ items[4].model }}</h3>
+                                <h4 class="product-price">${{ items[4].price }}</h4>
                             </div>
                         </div>
                     </div>
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div id="product-2" class="single-product">
+                        <div id="product-6" class="single-product">
                             <div class="part-1">
                                 <span class="discount">15% off</span>
                                 <ul>
                                     <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-plus"></i></a></li>
                                     <li><a href="#"><i class="fas fa-expand"></i></a></li>
                                 </ul>
                             </div>
@@ -129,12 +124,11 @@
                     </div>
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div id="product-3" class="single-product">
+                        <div id="product-7" class="single-product">
                             <div class="part-1">
                                 <ul>
                                     <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-plus"></i></a></li>
                                     <li><a href="#"><i class="fas fa-expand"></i></a></li>
                                 </ul>
                             </div>
@@ -147,13 +141,12 @@
                     </div>
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div id="product-4" class="single-product">
+                        <div id="product-8" class="single-product">
                             <div class="part-1">
                                 <span class="new">new</span>
                                 <ul>
                                     <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-plus"></i></a></li>
                                     <li><a href="#"><i class="fas fa-expand"></i></a></li>
                                 </ul>
                             </div>
@@ -326,6 +319,31 @@ a:hover {
 }
 
 .section-products #product-4 .part-1 {
+    /*background: url("./assets/laptops/acer15.jpg") no-repeat center;*/
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.section-products #product-5 .part-1 {
+    background: url("./assets/laptops/dellLatitude.jpg") no-repeat center;
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.section-products #product-6 .part-1 {
+    /*background: url("./assets/laptops/acer15.jpg") no-repeat center;*/
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+
+.section-products #product-7 .part-1 {
+    /*background: url("./assets/laptops/acer15.jpg") no-repeat center;*/
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.section-products #product-8 .part-1 {
     /*background: url("./assets/laptops/acer15.jpg") no-repeat center;*/
     background-size: cover;
     transition: all 0.5s;
