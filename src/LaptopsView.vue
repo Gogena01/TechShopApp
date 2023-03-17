@@ -27,8 +27,8 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">{{ items[1].model }}</h3>
-                                <h4 class="product-old-price">${{ items[1].price }}</h4>
-                                <h4 class="product-price">$1899.99</h4>
+                                <h4 class="product-old-price">$2000.00</h4>
+                                <h4 class="product-price">${{ items[1].price }}</h4>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                             <div class="part-2">
                                 <h3 class="product-title">{{ items[2].model }}</h3>
                                 <h4 class="product-old-price">${{ items[2].oldPrIce }}</h4>
-                                <h4 class="product-price">${{ items[2].newPrice }}</h4>
+                                <h4 class="product-price">${{ items[2].price }}</h4>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">{{ items[3].model }}</h3>
-                                <h4 class="product-price">{{ items[3].price }}</h4>
+                                <h4 class="product-price">${{ items[3].price }}</h4>
                             </div>
                         </div>
                     </div>

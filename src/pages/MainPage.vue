@@ -4,7 +4,7 @@
         <div class="mainNav">
             <a href="/favourites" class="one" style="text-decoration: none;">Favourites</a>
             <a href="/cart" class="two" style="text-decoration: none;">Shopping cart</a>
-            <a href="/catalog" class="three" style="text-decoration: none;">Special Offers</a>
+            <a href="/offers" class="three" style="text-decoration: none;">Special Offers</a>
         </div>
         <div class="welc">
             <div class="wrapper" >
@@ -44,7 +44,7 @@
     text-align: center;
     position: absolute;
     top: 50%;
-    left: 41%;
+    left: 37.6%;
     transform: translate(-50%, -50%);
     justify-content: center;
     color: black;
@@ -150,8 +150,8 @@
     bottom: 0;
     left: 0;
 
-    width: 900px;
-    height: 450px;
+    width: 1000px;
+    height: 500px;
 
     background: hsl(305, 47%, 85%);
     box-shadow: 1px 1px 25px 3px rgba(0, 0, 0, .3);
@@ -203,29 +203,27 @@
 }
 
 
-/*************/
 .header {
     color: #db49d4;
     position: absolute;
     width: max-content;
-    font-size: 2.875rem;
+    font-size: 3rem;
 
     white-space: nowrap;
 
     top: 3%;
-    left: 15%;
+    left: 16%;
 }
 
 
-/*************/
 .content {
     position: absolute;
-    font-size: 1.526rem;
+    font-size: 1.54rem;
     width: 40%;
     font-family:'Times New Roman', Times, serif;
 
 
-    top: 15%;
+    top: 19%;
     left: 7%;
 }
 
