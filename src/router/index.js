@@ -56,7 +56,7 @@ const routes = [
     {
         path:'/offers',
         name:'offers',
-        component:() => import('../OffersView.vue')
+        component:() => import('../pages/OffersView.vue')
     }
 ]
 const router = new VueRouter({
