@@ -108,17 +108,17 @@
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-6" class="single-product">
-                            <div class="part-1">
+                            <div class="part-1" :style="{ background: 'url(' + items[5].img + ') no-repeat center', backgroundSize: 'cover'}">
                                 <span class="discount">15% off</span>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                    <li><a v-on:click="addToCart(items[5].model, items[5].price, items[5].img)"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a v-on:click="addToFavourite(items[5].model, items[5].price, items[5].img)"><i class="fas fa-heart"></i></a></li>
+                                    <li><a :href="'/products/' + items[5].id"><i class="fas fa-expand"></i></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Here Product Title</h3>
-                                <h4 class="product-price">$49.99</h4>
+                                <h3 class="product-title">{{ items[5].model }}</h3>
+                                <h4 class="product-price">${{ items[5].price }}</h4>
                             </div>
                         </div>
                     </div>
@@ -331,7 +331,8 @@ a:hover {
 }
 
 .section-products #product-6 .part-1 {
-    /*background: url("./assets/laptops/acer15.jpg") no-repeat center;*/
+    background: url("./assets/laptops/Alienware\ x15\ R2\ Gaming\ Laptop\ _\ Dell\ USA\ \(1\).png") no-repeat center;
+    background-color: white;
     background-size: cover;
     transition: all 0.5s;
 }
