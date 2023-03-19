@@ -36,21 +36,18 @@ export default {
         }
     },
     mounted() {
-        firebase.auth().onAuthStateChanged(user => {
 
-            if (user) {
-                this.currentUser = user;
-                firebase.firestore().collection('laptops').where('price', '<', 2000).get().then(querySnapshot => {
-                    querySnapshot.forEach(doc => {
-                        this.items.push(doc.data());
-                        this.total += doc.data().price
-                    });
-                });
-
-            }
-
-
+        firebase.firestore().collection('laptops').where('price', '<', 2000).get().then(querySnapshot => {
+            querySnapshot.forEach(doc => {
+                this.items.push(doc.data());
+                this.total += doc.data().price
+            });
         });
+
+
+
+
+        
     }
 }
 </script>

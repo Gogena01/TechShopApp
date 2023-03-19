@@ -20,9 +20,11 @@
                                 :style="{ background: 'url(' + items[1].img + ') no-repeat center', backgroundRepeat: 'center', backgroundSize: 'cover' }">
                                 <ul>
                                     <li><a v-on:click="addToCart(items[1].model, items[1].price, items[1].img)"
-                                         href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
-                                    <li><a v-on:click="addToFavourite(items[1].model, items[1].price, items[1].img)" href="#"><font-awesome-icon icon="heart" /></a></li>
-                                    <li><a :href="'/products/' + items[1].id"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
+                                            href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToFavourite(items[1].model, items[1].price, items[1].img)"
+                                            href="#"><font-awesome-icon icon="heart" /></a></li>
+                                    <li><a :href="'/products/' + items[1].id"><font-awesome-icon
+                                                icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
@@ -41,8 +43,10 @@
                                 <ul>
                                     <li><a v-on:click="addToCart(items[0].model, items[0].price, items[0].img)"><font-awesome-icon
                                                 icon="shopping-cart" /></a></li>
-                                    <li><a v-on:click="addToFavourite(items[0].model, items[0].price, items[0].img)"><font-awesome-icon icon="heart" /></a></li>
-                                    <li><a :href="'/products/' + items[0].id"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
+                                    <li><a v-on:click="addToFavourite(items[0].model, items[0].price, items[0].img)"><font-awesome-icon
+                                                icon="heart" /></a></li>
+                                    <li><a :href="'/products/' + items[0].id"><font-awesome-icon
+                                                icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
@@ -57,9 +61,12 @@
                             <div class="part-1"
                                 :style="{ background: 'url(' + items[2].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[2].model, items[2].price, items[2].img)"><font-awesome-icon icon="shopping-cart" /></a></li>
-                                    <li><a v-on:click="addToFavourite(items[2].model, items[2].price, items[2].img)"><font-awesome-icon icon="heart" /></a></li>
-                                    <li><a :href="'/products/' + items[2].id"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
+                                    <li><a v-on:click="addToCart(items[2].model, items[2].price, items[2].img)"><font-awesome-icon
+                                                icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToFavourite(items[2].model, items[2].price, items[2].img)"><font-awesome-icon
+                                                icon="heart" /></a></li>
+                                    <li><a :href="'/products/' + items[2].id"><font-awesome-icon
+                                                icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
@@ -76,9 +83,12 @@
                                 :style="{ background: 'url(' + items[3].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <span class="new">new</span>
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[3].model, items[3].price, items[3].img)"><font-awesome-icon icon="shopping-cart" /></a></li>
-                                    <li><a v-on:click="addToFavourite(items[3].model, items[3].price, items[3].img)"><font-awesome-icon icon="heart" /></a></li>
-                                    <li><a :href="'/products/' + items[3].id"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
+                                    <li><a v-on:click="addToCart(items[3].model, items[3].price, items[3].img)"><font-awesome-icon
+                                                icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToFavourite(items[3].model, items[3].price, items[3].img)"><font-awesome-icon
+                                                icon="heart" /></a></li>
+                                    <li><a :href="'/products/' + items[3].id"><font-awesome-icon
+                                                icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
@@ -94,9 +104,12 @@
                                 :style="{ background: 'url(' + items[4].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <span class="new">new</span>
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[4].model, items[4].price, items[4].img)"><font-awesome-icon icon="shopping-cart" /></a></li>
-                                    <li><a v-on:click="addToFavourite(items[4].model, items[4].price, items[4].img)"><font-awesome-icon icon="heart" /></a></li>
-                                    <li><a :href="'/products/' + items[4].id"><font-awesome-icon icon="fa-brands fa-readme" /></a></li>
+                                    <li><a v-on:click="addToCart(items[4].model, items[4].price, items[4].img)"><font-awesome-icon
+                                                icon="shopping-cart" /></a></li>
+                                    <li><a v-on:click="addToFavourite(items[4].model, items[4].price, items[4].img)"><font-awesome-icon
+                                                icon="heart" /></a></li>
+                                    <li><a :href="'/products/' + items[4].id"><font-awesome-icon
+                                                icon="fa-brands fa-readme" /></a></li>
                                 </ul>
                             </div>
                             <div class="part-2">
@@ -108,11 +121,14 @@
                     <!-- Single Product -->
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div id="product-6" class="single-product">
-                            <div class="part-1" :style="{ background: 'url(' + items[5].img + ') no-repeat center', backgroundSize: 'cover'}">
+                            <div class="part-1"
+                                :style="{ background: 'url(' + items[5].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <span class="discount">15% off</span>
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[5].model, items[5].price, items[5].img)"><i class="fas fa-shopping-cart"></i></a></li>
-                                    <li><a v-on:click="addToFavourite(items[5].model, items[5].price, items[5].img)"><i class="fas fa-heart"></i></a></li>
+                                    <li><a v-on:click="addToCart(items[5].model, items[5].price, items[5].img)"><i
+                                                class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a v-on:click="addToFavourite(items[5].model, items[5].price, items[5].img)"><i
+                                                class="fas fa-heart"></i></a></li>
                                     <li><a :href="'/products/' + items[5].id"><i class="fas fa-expand"></i></a></li>
                                 </ul>
                             </div>
@@ -180,22 +196,27 @@ export default {
     methods: {
 
         addToCart(productName, productPrice, img) {
-            const db = firebase.firestore();
+            const user = firebase.auth().currentUser;
+            if (user) {
+                const db = firebase.firestore();
 
-            const data = {
-                name: productName,
-                price: productPrice,
-                email: firebase.auth().currentUser.email,
-                image: img
-            };
+                const data = {
+                    name: productName,
+                    price: productPrice,
+                    email: firebase.auth().currentUser.email,
+                    image: img
+                };
 
-            db.collection('cart').doc().set(data)
-                .then(() => {
-                    console.log('Data inserted successfully!');
-                })
-                .catch((error) => {
-                    console.error('Error inserting data: ', error);
-                });
+                db.collection('cart').doc().set(data)
+                    .then(() => {
+                        console.log('Data inserted successfully!');
+                    })
+                    .catch((error) => {
+                        console.error('Error inserting data: ', error);
+                    });
+            } else {
+                this.$router.replace('/login')
+            }
         },
 
 
@@ -429,5 +450,4 @@ a:hover {
     height: 1px;
     background-color: #444444;
     transform: translateY(20%);
-}
-</style>
+}</style>
