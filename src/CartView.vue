@@ -2,7 +2,7 @@
     <div class="cartD">
         <h1 style="margin-left:350px; font-weight: 800;">Welcome to your cart, {{ currentUser.displayName }}</h1>
         <h2 style="margin-left: 500px; font-weight: 700;">Total price:{{ total }}</h2>
-        <br/>
+        <br />
         <a href="/checkout" style="margin-left: 580px;"> <button class="btnCheckout"> Checkout </button></a>
         <hr style="top:50%">
         <div class="row" style="margin-left: 100px; margin-top: 200px;">
@@ -15,10 +15,14 @@
                         <h3 class="product-title">{{ item.name }}</h3>
                         <h4 class="product-price">${{ item.price }}</h4>
                     </div>
+                    <div>
+                        <button class="btnCheck">Buy product</button>
+                        <button v-on:click="removeFromCart(item.id)" class="delBtn">Remove from cart</button>
+                    </div>
                 </div>
                 <div v-else>
-                    Your cart is empty.
-                </div> 
+                    <h1>Your cart is empty.</h1>
+                </div>
             </div>
         </div>
     </div>
@@ -33,32 +37,57 @@ export default {
         return {
             currentUser: null,
             items: [],
-            total:0
+            total: 0
         };
     },
     mounted() {
         firebase.auth().onAuthStateChanged(user => {
-            
+
             if (user) {
                 this.currentUser = user;
                 firebase.firestore().collection('cart').where('email', '==', user.email).get().then(querySnapshot => {
                     querySnapshot.forEach(doc => {
                         this.items.push(doc.data());
-                        this.total += doc.data().price                    
+                        this.total += doc.data().price
+
                     });
                 });
-                
+
             } else {
                 this.$router.replace('/login')
             }
 
-            
+
         });
 
-        
-    
+
+
     },
-};
+
+
+    methods: {
+        removeFromCart(id) {
+            firebase.firestore().collection('cart')
+                .where('id', '==', id)
+                .get()
+                .then(querySnapshot => {
+                    querySnapshot.forEach(doc => {
+                        doc.ref.delete().then(() => {
+                            // Item successfully deleted from collection
+                            // Remove item from local items array and update total
+                            const itemIndex = this.items.findIndex(item => item.id === id);
+                            this.total -= this.items[itemIndex].price;
+                            this.items.splice(itemIndex, 1);
+                        }).catch(error => {
+                            console.error('Error removing item: ', error);
+                        });
+                    });
+                });
+        }
+    }
+
+}
+
 </script>
   
 <style>
@@ -96,6 +125,31 @@ export default {
 .btnCheckout:hover {
     opacity: 1;
     padding: 5px;
+}
+
+.btnCheck {
+    background-color: purple;
+    border-color: purple;
+    border-radius: 8%;
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+
+.btnCheck:hover {
+    opacity: 1;
+}
+
+.delBtn {
+    background-color: purple;
+    border-color: purple;
+    border-radius: 8%;
+    margin-left: 10px;
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+
+.delBtn:hover {
+    opacity: 1;
 }
 </style>
   

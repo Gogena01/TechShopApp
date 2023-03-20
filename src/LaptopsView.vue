@@ -19,7 +19,7 @@
                             <div class="part-1"
                                 :style="{ background: 'url(' + items[1].img + ') no-repeat center', backgroundRepeat: 'center', backgroundSize: 'cover' }">
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[1].model, items[1].price, items[1].img)"
+                                    <li><a v-on:click="addToCart(items[1].model, items[1].price, items[1].img, items[1].id)"
                                             href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
                                     <li><a v-on:click="addToFavourite(items[1].model, items[1].price, items[1].img)"
                                             href="#"><font-awesome-icon icon="heart" /></a></li>
@@ -41,7 +41,8 @@
                                 :style="{ background: 'url(' + items[0].img + ')', backgroundRepeat: 'center', backgroundSize: 'cover' }">
                                 <span class="discount">15% off</span>
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[0].model, items[0].price, items[0].img)"><font-awesome-icon
+                                    <li><a
+                                            v-on:click="addToCart(items[0].model, items[0].price, items[0].img, items[0].id)"><font-awesome-icon
                                                 icon="shopping-cart" /></a></li>
                                     <li><a v-on:click="addToFavourite(items[0].model, items[0].price, items[0].img)"><font-awesome-icon
                                                 icon="heart" /></a></li>
@@ -61,7 +62,8 @@
                             <div class="part-1"
                                 :style="{ background: 'url(' + items[2].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[2].model, items[2].price, items[2].img)"><font-awesome-icon
+                                    <li><a
+                                            v-on:click="addToCart(items[2].model, items[2].price, items[2].img, items[2].id)"><font-awesome-icon
                                                 icon="shopping-cart" /></a></li>
                                     <li><a v-on:click="addToFavourite(items[2].model, items[2].price, items[2].img)"><font-awesome-icon
                                                 icon="heart" /></a></li>
@@ -83,7 +85,8 @@
                                 :style="{ background: 'url(' + items[3].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <span class="new">new</span>
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[3].model, items[3].price, items[3].img)"><font-awesome-icon
+                                    <li><a
+                                            v-on:click="addToCart(items[3].model, items[3].price, items[3].img, items[3].id)"><font-awesome-icon
                                                 icon="shopping-cart" /></a></li>
                                     <li><a v-on:click="addToFavourite(items[3].model, items[3].price, items[3].img)"><font-awesome-icon
                                                 icon="heart" /></a></li>
@@ -104,7 +107,8 @@
                                 :style="{ background: 'url(' + items[4].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <span class="new">new</span>
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[4].model, items[4].price, items[4].img)"><font-awesome-icon
+                                    <li><a
+                                            v-on:click="addToCart(items[4].model, items[4].price, items[4].img, items[4].id)"><font-awesome-icon
                                                 icon="shopping-cart" /></a></li>
                                     <li><a v-on:click="addToFavourite(items[4].model, items[4].price, items[4].img)"><font-awesome-icon
                                                 icon="heart" /></a></li>
@@ -125,7 +129,8 @@
                                 :style="{ background: 'url(' + items[5].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <span class="discount">15% off</span>
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[5].model, items[5].price, items[5].img)"><font-awesome-icon
+                                    <li><a
+                                            v-on:click="addToCart(items[5].model, items[5].price, items[5].img, items[5].id)"><font-awesome-icon
                                                 icon="shopping-cart" /></a></li>
                                     <li><a v-on:click="addToFavourite(items[5].model, items[5].price, items[5].img)"><font-awesome-icon
                                                 icon="heart" /></a></li>
@@ -146,7 +151,8 @@
                                 :style="{ background: 'url(' + items[6].img + ') no-repeat center', backgroundSize: 'cover' }">
                                 <span class="discount">15% off</span>
                                 <ul>
-                                    <li><a v-on:click="addToCart(items[6].model, items[6].price, items[6].img)"><font-awesome-icon
+                                    <li><a
+                                            v-on:click="addToCart(items[6].model, items[6].price, items[6].img, items[6].id)"><font-awesome-icon
                                                 icon="shopping-cart" /></a></li>
                                     <li><a v-on:click="addToFavourite(items[6].model, items[6].price, items[6].img)"><font-awesome-icon
                                                 icon="heart" /></a></li>
@@ -200,7 +206,7 @@ export default {
     },
     methods: {
 
-        addToCart(productName, productPrice, img) {
+        addToCart(productName, productPrice, img, id) {
             const user = firebase.auth().currentUser;
             if (user) {
                 const db = firebase.firestore();
@@ -209,7 +215,8 @@ export default {
                     name: productName,
                     price: productPrice,
                     email: firebase.auth().currentUser.email,
-                    image: img
+                    image: img,
+                    id:id
                 };
 
                 db.collection('cart').doc().set(data)
@@ -231,7 +238,7 @@ export default {
                 name: productName,
                 price: productPrice,
                 email: firebase.auth().currentUser.email,
-                image: img
+                image: img,
             };
 
             db.collection('favourites').doc().set(data)
@@ -351,7 +358,7 @@ a:hover {
 }
 
 .section-products #product-5 .part-1 {
-    background: url("./assets/laptops/Alienware\ x15\ R2\ Gaming\ Laptop\ _\ Dell\ USA\ \(1\).png") no-repeat center;
+    /*background: url("./assets/laptops/Alienware\ x15\ R2\ Gaming\ Laptop\ _\ Dell\ USA\ \(1\).png") no-repeat center;*/
     background-color: white;
     background-size: cover;
     transition: all 0.5s;
@@ -365,7 +372,7 @@ a:hover {
 
 
 .section-products #product-7 .part-1 {
-   /* background: url("./assets/laptops/Lenovo\ IdeaPad\ 5i\ Pro\ 82L9006QUS\ with\ Windows\ 11\ Pro\ Launched\ in\ the\ US\ -\ Online\ Shopping\ USA.png") no-repeat center;*/
+    /* background: url("./assets/laptops/Lenovo\ IdeaPad\ 5i\ Pro\ 82L9006QUS\ with\ Windows\ 11\ Pro\ Launched\ in\ the\ US\ -\ Online\ Shopping\ USA.png") no-repeat center;*/
     background-size: cover;
     transition: all 0.5s;
 }
@@ -455,5 +462,4 @@ a:hover {
     height: 1px;
     background-color: #444444;
     transform: translateY(20%);
-}
-</style>
+}</style>
