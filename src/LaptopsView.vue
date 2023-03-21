@@ -333,28 +333,28 @@ a:hover {
 }
 
 .section-products #product-1 .part-1 {
-    /*background: url("./assets/laptops/asusTuf.jpg") no-repeat center;*/
+    /*background: url("./assets/laptops/asusTuf.jpg") no-repeat center*/
     /*background-size: cover;*/
     background-repeat: no-repeat;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .section-products #product-2 .part-1 {
     /* background: url("./assets/laptops/macbook.jpg") no-repeat center;*/
     background-size: cover;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .section-products #product-3 .part-1 {
     /*background: url("./assets/laptops/razerBlade.jpg") no-repeat center;*/
     background-size: cover;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .section-products #product-4 .part-1 {
     /*background: url("./assets/laptops/acer15.jpg") no-repeat center;*/
     background-size: cover;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .section-products #product-5 .part-1 {

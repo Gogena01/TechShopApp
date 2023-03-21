@@ -16,7 +16,7 @@
                         <h4 class="product-price">${{ item.price }}</h4>
                     </div>
                     <div>
-                        <button class="btnCheck">Buy product</button>
+                        <button v-on:click="addToCheckout(item.name, item.price, item.image, item.id)" class="btnCheck">Buy product</button>
                         <button v-on:click="removeFromCart(item.id)" class="delBtn">Remove from cart</button>
                     </div>
                 </div>
@@ -83,6 +83,30 @@ export default {
                         });
                     });
                 });
+        },
+
+
+        addToCheckout(itemModel, itemPrice, img, id) {
+            const db = firebase.firestore();
+
+            const data = {
+                model:itemModel,
+                price:itemPrice,
+                email:firebase.auth().currentUser.email,
+                img:img,
+                id:id
+            };
+
+            db.collection('checkout').doc().set(data)
+            .then(() => {
+                console.log('Data inserted successfully!')
+            })
+            .catch((error) => {
+                console.error(error)
+            })
+
+
+
         }
     }
 

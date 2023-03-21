@@ -57,6 +57,11 @@ const routes = [
         path:'/offers',
         name:'offers',
         component:() => import('../pages/OffersView.vue')
+    },
+    {
+        path:'/checkout',
+        name:'checkout',
+        component:() => import('../pages/CheckoutView.vue')
     }
 ]
 const router = new VueRouter({
