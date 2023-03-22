@@ -1,5 +1,6 @@
 <template>
     <div class="divCheckOut">
+        <h1 class="h1Check">Checkout</h1>
         <div v-for="item of items" :key="item.id" class="prd">
             <ul>
                 <div
@@ -57,18 +58,24 @@ export default {
     height: 90vh;
     position: absolute;
     left: 30%;
-    width: 80vh;
+    width: 85vh;
     top: 5%;
 
+}
+
+.h1Check {
+    position: absolute;
+    left: 38%;
+    top: 5%;
 }
 
 .prd {
     display: inline-block;
     border: solid 4px rgba(199, 27, 199, 0.527);
     width: 700px;
-    margin-top: 300px;
+    margin-top: 200px;
     margin-left: 30px;
-    background-color: rgba(199, 27, 199, 0.527);
-    color: white;
+    background-color: white;
+    color: rgb(14, 13, 13);
 }
 </style>
