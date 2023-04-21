@@ -9,6 +9,8 @@
                     <li>{{ item.name }}</li>
                     <li>{{ item.price }}</li>
                 </ul>
+                <br>
+                <button class="addFavBtn" v-on:click="addToCart(item.name,item.price,item.image,item.id)">Add to cart</button>
             </div>
 
         </ul>
@@ -48,6 +50,33 @@ export default {
 
 
     },
+
+    methods: {
+        addToCart(productName, productPrice, img, id) {
+            const user = firebase.auth().currentUser;
+            if (user) {
+                const db = firebase.firestore();
+
+                const data = {
+                    name: productName,
+                    price: productPrice,
+                    email: firebase.auth().currentUser.email,
+                    image: img,
+                    id:id
+                };
+
+                db.collection('cart').doc().set(data)
+                    .then(() => {
+                        console.log('Data inserted successfully!');
+                    })
+                    .catch((error) => {
+                        console.error('Error inserting data: ', error);
+                    });
+            } else {
+                this.$router.replace('/login')
+            }
+        }
+    }
 }
 
 </script>
@@ -68,5 +97,15 @@ export default {
 
 .prod {
     margin-top: 150px;
+}
+
+.addFavBtn {
+    background-color: purple;
+    border-color: purple;
+    opacity: 0.7;
+}
+
+.addFavBtn:hover {
+    opacity: 1;
 }
 </style>
