@@ -118,6 +118,7 @@ export default {
     width: 500px;
     border: solid 2px;
     border-color: rgb(168, 9, 168);
+    box-shadow: 7px 7px darkmagenta; 
 }
 
 .inf {
