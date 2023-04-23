@@ -3,31 +3,36 @@
         <h1 style="margin-left:350px; font-weight: 800;">Welcome to your cart, {{ currentUser.displayName }}</h1>
         <h2 style="margin-left: 500px; font-weight: 700;">Total price:{{ total }}</h2>
         <br />
-        <a href="/checkout" style="margin-left: 580px;"> <button class="btnCheckout"> Checkout </button></a>
+        <a href="/checkout" style="margin-left: 580px;">
+            <button class="btnCheckout"> Checkout </button>
+        </a>
         <hr style="top:50%">
         <div class="row" style="margin-left: 100px; margin-top: 200px;">
-            <div v-for="item in items" :key="item.id" class="col-md-6 col-lg-4 col-xl-3" style="margin-right: 200px;">
-                <div v-if="items.length > 0" id="product-2" class="single-product">
-                    <div class="part-1"
-                        :style="{ background: 'url(' + item.image + ')', backgroundRepeat: 'center', backgroundSize: 'cover' }">
-                    </div>
-                    <div class="part-2" style="color: black;">
-                        <h3 class="product-title">{{ item.name }}</h3>
-                        <h4 class="product-price">${{ item.price }}</h4>
-                    </div>
-                    <div>
-                        <button v-on:click="addToCheckout(item.name, item.price, item.image, item.id)" class="btnCheck">Buy product</button>
-                        <button v-on:click="removeFromCart(item.id)" class="delBtn">Remove from cart</button>
+            <div v-if="items.length > 0">
+                <div v-for="item in items" :key="item.id" class="col-md-6 col-lg-4 col-xl-3" style="margin-right: 200px;">
+                    <div id="product-2" class="single-product">
+                        <div class="part-1"
+                            :style="{ background: 'url(' + item.image + ')', backgroundRepeat: 'center', backgroundSize: 'cover' }">
+                        </div>
+                        <div class="part-2" style="color: black;">
+                            <h3 class="product-title">{{ item.name }}</h3>
+                            <h4 class="product-price">${{ item.price }}</h4>
+                        </div>
+                        <div>
+                            <button v-on:click="addToCheckout(item.name, item.price, item.image, item.id)"
+                                class="btnCheck">Buy product</button>
+                            <button v-on:click="removeFromCart(item.id)" class="delBtn">Remove from cart</button>
+                        </div>
                     </div>
                 </div>
-                <div v-else>
-                    <h1>Your cart is empty.</h1>
-                </div>
+            </div>
+            <div v-else>
+                <h1 class="empty">Your cart is empty.</h1>
             </div>
         </div>
     </div>
 </template>
-
+  
   
 <script>
 import firebase from 'firebase';
@@ -90,20 +95,20 @@ export default {
             const db = firebase.firestore();
 
             const data = {
-                model:itemModel,
-                price:itemPrice,
-                email:firebase.auth().currentUser.email,
-                img:img,
-                id:id
+                model: itemModel,
+                price: itemPrice,
+                email: firebase.auth().currentUser.email,
+                img: img,
+                id: id
             };
 
             db.collection('checkout').doc().set(data)
-            .then(() => {
-                console.log('Data inserted successfully!')
-            })
-            .catch((error) => {
-                console.error(error)
-            })
+                .then(() => {
+                    console.log('Data inserted successfully!')
+                })
+                .catch((error) => {
+                    console.error(error)
+                })
 
 
 
@@ -174,6 +179,15 @@ export default {
 
 .delBtn:hover {
     opacity: 1;
+}
+
+
+.empty {
+    position: absolute;
+    top: 40%;
+    left: 33%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
 }
 </style>
   
