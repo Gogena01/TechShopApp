@@ -1,7 +1,7 @@
 <template>
     <div class="cartD">
-        <h1 style="margin-left:350px; font-weight: 800;">Welcome to your cart, {{ currentUser.displayName }}</h1>
-        <h2 style="margin-left: 500px; font-weight: 700;">Total price:{{ total }}</h2>
+        <h1 style="margin-left:390px; font-weight: 800;">Welcome to your cart, {{ currentUser.displayName }}</h1>
+        <h2 style="margin-left: 500px; font-weight: 700;">Total price:{{ total }}$</h2>
         <br />
         <a href="/checkout" style="margin-left: 580px;">
             <button class="btnCheckout"> Checkout </button>

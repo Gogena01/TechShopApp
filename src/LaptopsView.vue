@@ -7,7 +7,7 @@
                     <div class="col-md-8 col-lg-6">
                         <div class="header">
                             <h1 style="color: purple;">Laptops</h1>
-                            <h2 style="font-weight: 800;">Find your dream laptop</h2>
+                            <h2 style="font-weight: 900;">Find your dream laptop</h2>
                         </div>
                     </div>
                 </div>
