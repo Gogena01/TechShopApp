@@ -1,6 +1,7 @@
 <template>
     <div class="divCheckOut">
-        <h1 class="h1Check">Checkout</h1>
+        <h1 class="h1Check" style="font-weight: 900;">Checkout</h1>
+        <hr style="background-color: rebeccapurple;" class="hrCheck">
         <div v-for="item of items" :key="item.id" class="prd">
             <ul>
                 <div
@@ -13,7 +14,7 @@
         </div>
 
         <div style="position: absolute; top: 90%; left: 30%;">
-            <h2>Total price: {{ totalPrice }}</h2>
+            <h2 style="font-weight: 700;">Total price: {{ totalPrice }}$</h2>
         </div>
     </div>
 </template>
@@ -55,10 +56,10 @@ export default {
 <style>
 .divCheckOut {
     background-color: white;
-    height: 90vh;
+    height: 94vh;
     position: absolute;
-    left: 30%;
-    width: 85vh;
+    left: 25%;
+    width: 89vh;
     top: 5%;
 
 }
@@ -67,6 +68,13 @@ export default {
     position: absolute;
     left: 38%;
     top: 5%;
+}
+
+.hrCheck {
+    position: absolute;
+    top: 14%;
+    height: 4px;
+    width: 100%;
 }
 
 .prd {
