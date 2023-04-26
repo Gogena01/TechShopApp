@@ -4,7 +4,7 @@
       <div class="inner-block">
         <div class="vue-tempalte">
           <form @submit.prevent="userLogin">
-            <h3>Sign In</h3>
+            <h3 style="font-weight: 900;color: purple;">Sign In</h3>
             <div class="form-group">
               <label>Email</label>
               <input type="email" class="form-control form-control-lg" v-model="user.email" />
@@ -16,7 +16,7 @@
             <br>
             <button type="submit" class="btn btn-dark btn-lg btn-block">Sign In</button>
             <p class="forgot-password text-right mt-2 mb-4">
-              <router-link to="/forgot-password">Forgot password ?</router-link>
+              <router-link to="/forgot-password" style="color: purple;">Forgot password ?</router-link>
             </p>
           </form>
         </div>

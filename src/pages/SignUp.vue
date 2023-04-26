@@ -4,7 +4,7 @@
             <div class="inner-block">
                 <div class="vue-tempalte">
                     <form @submit.prevent="userRegistration">
-                        <h3>Sign Up</h3>
+                        <h3 style="font-weight: 900;color: purple;">Sign Up</h3>
                         <div class="form-group">
                             <label>Name</label>
                             <input type="text" class="form-control form-control-lg" v-model="user.name" />
@@ -23,7 +23,7 @@
                         </button>
                         <p class="forgot-password text-right">
                             Already registered
-                            <router-link :to="{ name: 'login' }">sign in?</router-link>
+                            <router-link :to="{ name: 'login' }" style="color: purple;">sign in?</router-link>
                         </p>
                     </form>
                 </div>

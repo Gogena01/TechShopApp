@@ -2,7 +2,7 @@
     <div class="App">
         <div class="forgotPass">
             <form @submit.prevent="forgetPassword">
-                <h3>Forgot Password</h3>
+                <h3 style="font-weight: 900;color: purple;">Forgot Password</h3>
                 <div class="form-group">
                     <label>Email</label>
                     <input type="email" class="form-control form-control-lg" v-model="user.email" />
