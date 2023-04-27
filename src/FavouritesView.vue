@@ -90,7 +90,7 @@ export default {
     left: 17%;
     color: black;
     background-color: rgb(247, 214, 242);
-    height: 100vh;
+    height: max-content;
     width: 130vh;
 
 }

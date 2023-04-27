@@ -60,7 +60,7 @@ export default {
     top: 5%;
     left: 15%;
     padding: 50px;
-    height: 100vh;
+    height: max-content;
     width: 140vh;
 }
 
