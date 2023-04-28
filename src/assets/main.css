@@ -4,8 +4,8 @@
 
 body {
     /*background: #630e0e !important;*/
-    background: rgb(56,18,51);
-background: linear-gradient(90deg, rgba(56,18,51,1) 0%, rgba(184,8,159,1) 100%);
+    background: rgb(56, 18, 51);
+    background: linear-gradient(90deg, rgba(56, 18, 51, 1) 0%, rgba(184, 8, 159, 1) 100%);
     min-height: 100vh;
     display: flex;
     font-weight: 400;

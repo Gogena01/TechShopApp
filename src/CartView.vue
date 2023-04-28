@@ -132,7 +132,7 @@ export default {
     left: 18%;
     top: 7%;
     width: 130vh;
-    height: 100vh;
+    height: max-content;
     place-items: inherit;
     display: block;
 }

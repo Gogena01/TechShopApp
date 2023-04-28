@@ -9,7 +9,7 @@
             <p style="font-size: 25px;" class="pProd">{{ items[0].description }}</p>
             <br>
             <div class="navigProd">
-                <button v-on:click="addToCart(items[0].model, items[0].price, items[0].image)" class="btnAddCart">Add to
+                <button v-on:click="addToCart(items[0].model, items[0].price, items[0].img)" class="btnAddCart">Add to
                     cart <font-awesome-icon icon="shopping-cart" /></button>
                 <button v-on:click="addToFavourite(items[0].model, items[0].price, items[0].img)" class="btnAddFav">Add to
                     favourites <font-awesome-icon icon="heart" /></button>
