@@ -10,6 +10,8 @@
                 </div>
                 <p style="font-size: larger; font-weight: 700;">{{ item.model }}</p>
                 <p style="font-size: larger; font-weight: 600;">${{ item.price }}</p>
+                <button v-on:click="addToFavourite(item.name,item.price,item.img, item.id)"><font-awesome-icon icon="heart" /></button>
+                <button style="margin-left: 15px;" v-on:click="addToCart(item.name,item.price,item.img,item.id)"><font-awesome-icon icon="shopping-cart" /></button>
             </div>
         </div>
     </div>
@@ -43,11 +45,52 @@ export default {
                 this.total += doc.data().price
             });
         });
+    },
+
+    methods: {
+        addToCart(productName, productPrice, img, id) {
+            const user = firebase.auth().currentUser;
+            if (user) {
+                const db = firebase.firestore();
+
+                const data = {
+                    name: productName,
+                    price: productPrice,
+                    email: firebase.auth().currentUser.email,
+                    image: img,
+                    id: id
+                };
+
+                db.collection('cart').doc().set(data)
+                    .then(() => {
+                        console.log('Data inserted successfully!');
+                    })
+                    .catch((error) => {
+                        console.error('Error inserting data: ', error);
+                    });
+            } else {
+                this.$router.replace('/login')
+            }
+        },
 
 
+        addToFavourite(productName, productPrice, img) {
+            const db = firebase.firestore();
+            const data = {
+                name: productName,
+                price: productPrice,
+                email: firebase.auth().currentUser.email,
+                image: img,
+            };
 
-
-        
+            db.collection('favourites').doc().set(data)
+                .then(() => {
+                    console.log('Data inserted successfully!');
+                })
+                .catch((error) => {
+                    console.error('Error inserting data:', error)
+                })
+        }
     }
 }
 </script>
