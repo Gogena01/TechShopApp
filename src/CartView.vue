@@ -9,7 +9,7 @@
         <hr style="top:50%">
         <div class="row" style="margin-left: 100px; margin-top: 200px;">
             <div v-if="items.length > 0">
-                <div v-for="item in items" :key="item.id" class="col-md-6 col-lg-4 col-xl-3" style="margin-right: 200px;">
+                <div v-for="item in items" :key="item.id" class="col-md-6 col-lg-4 col-xl-3" style="display: inline-block; margin-right: 120px; bottom: 20px;">
                     <div id="product-2" class="single-product">
                         <div class="part-1"
                             :style="{ background: 'url(' + item.image + ')', backgroundRepeat: 'center', backgroundSize: 'cover' }">
@@ -132,9 +132,7 @@ export default {
     left: 18%;
     top: 7%;
     width: 130vh;
-    height: max-content;
-    place-items: inherit;
-    display: block;
+    height: 120vh;
 }
 
 .pr {

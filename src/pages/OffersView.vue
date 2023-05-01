@@ -10,8 +10,8 @@
                 </div>
                 <p style="font-size: larger; font-weight: 700;">{{ item.model }}</p>
                 <p style="font-size: larger; font-weight: 600;">${{ item.price }}</p>
-                <button v-on:click="addToFavourite(item.name,item.price,item.img, item.id)"><font-awesome-icon icon="heart" /></button>
-                <button style="margin-left: 15px;" v-on:click="addToCart(item.name,item.price,item.img,item.id)"><font-awesome-icon icon="shopping-cart" /></button>
+                <button class="favourites" v-on:click="addToFavourite(item.name,item.price,item.img, item.id)"><font-awesome-icon icon="heart" /></button>
+                <button class="cart" style="margin-left: 15px;" v-on:click="addToCart(item.name,item.price,item.img,item.id)"><font-awesome-icon icon="shopping-cart" /></button>
             </div>
         </div>
     </div>
@@ -105,6 +105,35 @@ export default {
     padding: 50px;
     height: max-content;
     width: 140vh;
+}
+
+
+.cart {
+    width: 40px;
+    background-color: purple;
+    color: white;
+    border-color: purple;
+    border-radius: 20%;
+    transition: all 0.5s;
+    opacity: 0.7;
+}
+
+.cart:hover {
+    opacity: 1;
+}
+
+.favourites {
+    width: 40px;
+    width: 40px;
+    background-color: purple;
+    color: white;
+    border-color: purple;
+    border-radius: 20%;
+    opacity: 0.7;
+}
+
+.favourites:hover {
+    opacity: 1;
 }
 
 .off {
