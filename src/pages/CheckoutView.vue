@@ -1,14 +1,14 @@
 <template>
     <div class="divCheckOut">
         <h1 class="h1Check" style="font-weight: 900;">Checkout</h1>
-        <hr style="background-color: rebeccapurple;" class="hrCheck">
+        <hr style="background-color: purple;" class="hrCheck">
         <div v-for="item of items" :key="item.id" class="prd">
             <ul>
                 <div
                     :style="{ background: 'url(' + item.img + ')', backgroundRepeat: 'center', backgroundSize: 'contain', height: '100px', width: '140px', }">
                 </div>
-                <li>Model: {{ item.model }}</li>
-                <li>Price: {{ item.price }}</li>
+                <li style="font-size: larger; font-weight: 700;">Model: {{ item.model }}</li>
+                <li style="font-size: larger; font-weight: 700;">Price: {{ item.price }}</li>
             </ul>
 
         </div>
@@ -73,7 +73,7 @@ export default {
 .hrCheck {
     position: absolute;
     top: 14%;
-    height: 4px;
+    height: 3px;
     width: 100%;
 }
 

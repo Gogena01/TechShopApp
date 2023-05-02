@@ -2,7 +2,7 @@
     <div class="favDiv">
         <h1 style="margin-left: 460px; font-weight: 800; margin-top: 50px;">{{ currentUser.displayName }}'s favourites </h1>
         <hr>
-        <ul v-for="item of items" :key="item.id" class="prod">
+        <ul v-for="item of items" :key="item.id" class="prod" >
             <div>
                 <img :style="{ background: 'url(' + item.image + ')', backgroundRepeat: 'center', backgroundSize: 'cover', width: '400px', height: '300px' }">
                 <ul>
@@ -90,13 +90,14 @@ export default {
     left: 17%;
     color: black;
     background-color: rgb(247, 214, 242);
-    height: max-content;
+    height: 130vh;
     width: 130vh;
 
 }
 
 .prod {
     margin-top: 150px;
+    display: inline-block;
 }
 
 .addFavBtn {
