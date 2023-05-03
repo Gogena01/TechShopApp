@@ -6,8 +6,8 @@
             <div>
                 <img :style="{ background: 'url(' + item.image + ')', backgroundRepeat: 'center', backgroundSize: 'cover', width: '400px', height: '300px' }">
                 <ul>
-                    <li>{{ item.name }}</li>
-                    <li>{{ item.price }}</li>
+                    <li>Model: {{ item.name }}</li>
+                    <li>${{ item.price }}</li>
                 </ul>
                 <br>
                 <button class="addFavBtn" v-on:click="addToCart(item.name,item.price,item.image,item.id)">Add to cart</button>
