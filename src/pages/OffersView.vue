@@ -75,6 +75,8 @@ export default {
 
 
         addToFavourite(productName, productPrice, img) {
+            const user = firebase.auth().currentUser;
+            if (user) {
             const db = firebase.firestore();
             const data = {
                 name: productName,
@@ -90,6 +92,9 @@ export default {
                 .catch((error) => {
                     console.error('Error inserting data:', error)
                 })
+            }else {
+                this.$router.replace('/login')
+            }
         }
     }
 }
