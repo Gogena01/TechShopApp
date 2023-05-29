@@ -145,7 +145,7 @@ export default {
     border-radius: 5%;
     color: white;
     padding: 3px;
-    opacity: 0.5;
+    opacity: 0.6;
     transition: all 0.5s;
 }
 
