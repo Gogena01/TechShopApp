@@ -6,7 +6,7 @@
                 <div class="row justify-content-center text-center">
                     <div class="col-md-8 col-lg-6">
                         <div class="header">
-                            <h1 style="color: purple;">Laptops</h1>
+                            <h1 style="color: rgb(117, 5, 117);">Laptops</h1>
                             <h2 style="font-weight: 900;">Find your dream laptop here</h2>
                         </div>
                     </div>
